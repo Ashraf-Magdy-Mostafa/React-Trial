@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Expences from "./comp/expnces";
+const DUMMY_EXPENSES = [
+  {
+    id: "e1",
+    title: "Toilet Paper",
+    amount: 94.12,
+    date: new Date(),
+  },
+  { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
+  {
+    id: "e3",
+    title: "Car Insurance",
+    amount: 294.67,
+    date: new Date(2021, 2, 28),
+  },
+  {
+    id: "e4",
+    title: "New Desk (Wooden)",
+    amount: 450,
+    date: new Date(),
+  },
+];
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2>Let's get star2ted!</h2>
+      <Expences
+        title={DUMMY_EXPENSES[0].title}
+        name={DUMMY_EXPENSES[0].id}
+        date={DUMMY_EXPENSES[0].date}
+      ></Expences>
+      <Expences
+        title={DUMMY_EXPENSES[0].title}
+        name={DUMMY_EXPENSES[0].id}
+        date={DUMMY_EXPENSES[0].date}
+      ></Expences>
+      <Expences
+        title={DUMMY_EXPENSES[0].title}
+        name={DUMMY_EXPENSES[0].id}
+        date={DUMMY_EXPENSES[0].date}
+      ></Expences>
     </div>
   );
 }
