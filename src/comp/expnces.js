@@ -8,7 +8,8 @@ function Expences(props) {
   const expenseTitle = "car insurance";
   const expenseAmount = 294.67;
   const ClickHandler = (event) => {
-    console.log("clicked", setTitle("changed"));
+    setTitle("changed");
+    console.log("changed", title);
   };
   return (
     <Card className="expense-item">

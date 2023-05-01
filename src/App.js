@@ -30,14 +30,14 @@ function App() {
         date={DUMMY_EXPENSES[0].date}
       ></Expences>
       <Expences
-        title={DUMMY_EXPENSES[0].title}
-        name={DUMMY_EXPENSES[0].id}
-        date={DUMMY_EXPENSES[0].date}
+        title={DUMMY_EXPENSES[1].title}
+        name={DUMMY_EXPENSES[1].id}
+        date={DUMMY_EXPENSES[1].date}
       ></Expences>
       <Expences
-        title={DUMMY_EXPENSES[0].title}
-        name={DUMMY_EXPENSES[0].id}
-        date={DUMMY_EXPENSES[0].date}
+        title={DUMMY_EXPENSES[2].title}
+        name={DUMMY_EXPENSES[2].id}
+        date={DUMMY_EXPENSES[2].date}
       ></Expences>
     </div>
   );
