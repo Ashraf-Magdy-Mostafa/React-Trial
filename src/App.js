@@ -1,3 +1,4 @@
+import { NewExpense } from "./comp/NewExpense/NewExpense";
 import Expences from "./comp/expnces";
 const DUMMY_EXPENSES = [
   {
@@ -23,6 +24,7 @@ const DUMMY_EXPENSES = [
 function App() {
   return (
     <div>
+      <NewExpense />
       <h2>Let's get star2ted!</h2>
       <Expences
         title={DUMMY_EXPENSES[0].title}
