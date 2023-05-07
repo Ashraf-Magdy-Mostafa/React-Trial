@@ -2,6 +2,7 @@ import { ExpenseDate } from "./ExpenseDate";
 import { Card } from "./card";
 import "./ExpenseItem.css";
 import { useState } from "react";
+
 function Expences(props) {
   const [title, setTitle] = useState(props.title);
   const expenseDate = new Date();
@@ -11,6 +12,7 @@ function Expences(props) {
     setTitle("changed");
     console.log("changed", title);
   };
+
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />

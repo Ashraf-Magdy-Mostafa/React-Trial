@@ -1,6 +1,9 @@
+import { List } from "./newList";
+import { useState } from "react";
 import { NewExpense } from "./comp/NewExpense/NewExpense";
 import Expences from "./comp/expnces";
-const DUMMY_EXPENSES = [
+import { Card } from "./comp/card";
+export const DUMMY_EXPENSES = [
   {
     id: "e1",
     title: "Toilet Paper",
@@ -22,26 +25,20 @@ const DUMMY_EXPENSES = [
   },
 ];
 function App() {
+  // const newArr = () => {};
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
+  };
   return (
-    <div>
-      <NewExpense />
+    <Card>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <h2>Let's get star2ted!</h2>
-      <Expences
-        title={DUMMY_EXPENSES[0].title}
-        name={DUMMY_EXPENSES[0].id}
-        date={DUMMY_EXPENSES[0].date}
-      ></Expences>
-      <Expences
-        title={DUMMY_EXPENSES[1].title}
-        name={DUMMY_EXPENSES[1].id}
-        date={DUMMY_EXPENSES[1].date}
-      ></Expences>
-      <Expences
-        title={DUMMY_EXPENSES[2].title}
-        name={DUMMY_EXPENSES[2].id}
-        date={DUMMY_EXPENSES[2].date}
-      ></Expences>
-    </div>
+
+      <List onlist={expenses} />
+    </Card>
   );
 }
 
