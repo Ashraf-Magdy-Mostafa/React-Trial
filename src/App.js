@@ -47,15 +47,6 @@ function App() {
     //return (filtered array where checks to be true the give condition above)
   });
 
-  let expensesContent = filteredExpensesArray.map((expense) => (
-    <Expences
-      key={expense.id}
-      title={expense.title}
-      amount={expense.amount}
-      date={expense.date}
-    />
-  ));
-
   return (
     <Card>
       <NewExpense onAddExpense={addExpenseHandler} />

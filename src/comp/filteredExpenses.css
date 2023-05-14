@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.button {
+  width: 100px;
+  height: 50px;
+  background-color: #ffffff;
+  border-color: #510674;
+  border-radius: 12px;
+  border: 1px solid;
+}
