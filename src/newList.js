@@ -1,5 +1,5 @@
 import { Card } from "./comp/card";
-import Expences from "./comp/expnces";
+import Expences from "./comp/expnces.js";
 
 export function List(props) {
   console.log(props.onlist);
